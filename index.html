@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>To-Do List & Task Tracker</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 min-h-screen">
+
+    <!-- Header -->
+    <header class="bg-purple-600 text-white py-6 shadow-md">
+
+        <div class="max-w-4xl mx-auto px-4">
+
+            <h1 class="text-3xl font-bold text-center">
+                📝 To-Do List & Task Tracker
+            </h1>
+
+            <p class="text-center mt-2 text-purple-100">
+                Manage your daily tasks easily
+            </p>
+
+        </div>
+
+    </header>
+
+
+    <!-- Main Content -->
+    <main class="max-w-4xl mx-auto px-4 py-8">
+
+        <!-- Add Task Section -->
+        <div class="bg-white rounded-xl shadow-md p-6 mb-6">
+
+            <h2 class="text-xl font-bold text-gray-800 mb-4">
+                Add New Task
+            </h2>
+
+            <div class="flex flex-col sm:flex-row gap-3">
+
+                <input
+                    type="text"
+                    id="taskInput"
+                    placeholder="Enter your task..."
+                    class="flex-1 border border-gray-300 rounded-lg px-4 py-3 outline-none focus:ring-2 focus:ring-purple-500"
+                >
+
+                <button
+                    onclick="addTask()"
+                    class="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-semibold"
+                >
+                    + Add Task
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- Task Statistics -->
+        <div class="grid grid-cols-3 gap-4 mb-6">
+
+            <div class="bg-white rounded-xl shadow p-4 text-center">
+                <p class="text-gray-500 text-sm">
+                    Total
+                </p>
+
+                <p id="totalTasks" class="text-2xl font-bold text-purple-600">
+                    0
+                </p>
+            </div>
+
+
+            <div class="bg-white rounded-xl shadow p-4 text-center">
+                <p class="text-gray-500 text-sm">
+                    Completed
+                </p>
+
+                <p id="completedTasks" class="text-2xl font-bold text-green-600">
+                    0
+                </p>
+            </div>
+
+
+            <div class="bg-white rounded-xl shadow p-4 text-center">
+                <p class="text-gray-500 text-sm">
+                    Pending
+                </p>
+
+                <p id="pendingTasks" class="text-2xl font-bold text-orange-500">
+                    0
+                </p>
+            </div>
+
+        </div>
+
+
+        <!-- Filter Buttons -->
+        <div class="bg-white rounded-xl shadow-md p-4 mb-6">
+
+            <div class="flex flex-wrap gap-2">
+
+                <button
+                    onclick="showAll()"
+                    class="bg-purple-600 text-white px-4 py-2 rounded-lg"
+                >
+                    All
+                </button>
+
+                <button
+                    onclick="showPending()"
+                    class="bg-orange-500 text-white px-4 py-2 rounded-lg"
+                >
+                    Pending
+                </button>
+
+                <button
+                    onclick="showCompleted()"
+                    class="bg-green-600 text-white px-4 py-2 rounded-lg"
+                >
+                    Completed
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- Task List -->
+        <div class="bg-white rounded-xl shadow-md p-6">
+
+            <h2 class="text-xl font-bold text-gray-800 mb-4">
+                My Tasks
+            </h2>
+
+            <div id="taskList">
+
+                <!-- Tasks will be added here using JavaScript -->
+
+                <p id="emptyMessage" class="text-center text-gray-500 py-8">
+                    No tasks added yet.
+                </p>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="text-center py-6 text-gray-500">
+
+        <p>
+            Interactive To-Do List & Task Tracker
+        </p>
+
+        <p class="text-sm mt-1">
+            Developed using HTML, Tailwind CSS & JavaScript
+        </p>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
